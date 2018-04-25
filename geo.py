@@ -32,4 +32,8 @@ df = pd.DataFrame(title)
 df['coordinates'] = df['Title'].apply(geolocator.geocode, timeout = 1000).apply(lambda x: eval_results(x))
 
 
+df.to_csv('coordinates.csv', index=False)
+
+
+
 
